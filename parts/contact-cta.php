@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="eight col offset-4">
-				<p>Availble or freelancing, contracting or just general questions</p>
+				<p>Available for freelancing, contracting or any general enquiries</p>
 				<ul>
 					<li>
 						<a href="https://twitter.com/HeroNamedHarley" target="_blank" rel="noreferrer nofollow" aria-hidden="true">
