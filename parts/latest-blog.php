@@ -17,12 +17,34 @@
 				</a>
 			</div>
 			<div class="five col offset-2">
-				<article>
-					<h3><?php the_title(); ?></h3>
-					<?php the_excerpt(); ?>
-					<br>
-					<a href="<?php the_permalink(); ?>" class="btn right">Read More</a>
-				</article>
+				<?php
+				$args = array(
+					'post_type' => array( 'post' ),
+					'post_status' => array( 'publish' ),
+					'posts_per_page' => '1',
+					'order' => 'DESC',
+					'orderby' => 'date',
+					'category' => 'news',
+				);
+
+				$news = new WP_Query( $args );
+
+				if ( $news->have_posts() ) {
+					while ( $news->have_posts() ) {
+						$news->the_post();
+						?>
+						<article>
+							<h3><?php the_title(); ?></h3>
+							<?php the_excerpt(); ?>
+							<br>
+							<a href="<?php the_permalink(); ?>" class="btn right">Read More</a>
+						</article>
+						<?php
+					}
+				}
+
+				wp_reset_postdata();
+				?>
 			</div>
 		</div>
 	</div>
