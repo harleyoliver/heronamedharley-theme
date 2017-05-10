@@ -24,7 +24,7 @@
 					'posts_per_page' => '1',
 					'order' => 'DESC',
 					'orderby' => 'date',
-					'category' => 'news',
+					'category_name' => 'news',
 				);
 
 				$news = new WP_Query( $args );
