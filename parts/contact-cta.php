@@ -1,4 +1,11 @@
-<section id="contact">
+<?php
+/**
+ * Contact Section partial
+ *
+ * @package WordPress
+ */
+
+?><section id="contact">
 	<h2>Contact</h2>
 	<div class="container">
 		<div class="row">
@@ -21,7 +28,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="mailto:hrlyolvr@gmail.com" target="_blank" rel="noreferrer nofollow">
+						<a href="mailto:<?php echo esc_attr( get_option( 'admin_email' ) ); ?>" target="_blank" rel="noreferrer nofollow">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</a>
 					</li>
