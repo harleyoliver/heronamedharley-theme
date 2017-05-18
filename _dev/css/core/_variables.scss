@@ -1,0 +1,78 @@
+/*
+	Screen Sizes
+*/
+
+$smallest: 										"(min-width: 320px)";
+$tablet-portrait:							"(min-width: 768px)";
+$tablet:											"(min-width: 1024px)";
+$desktop:											"(min-width: 1200px)";
+
+/*
+	Colors
+*/
+
+$black:												rgb(0, 0, 0);
+$white:												rgb(255, 255, 255);
+$primary:											rgb(35, 31, 32);
+$secondary:										rgb(229, 82, 159);
+$accent:											rgb(209, 233, 220);
+$grey:												rgb(230, 230, 230);
+$green: 											rgb(213, 237, 224);
+$pink: 												rgb(236, 194, 196);
+$salmon:											rgb(251, 114, 99);
+$blue:												rgb(97, 105, 237);
+$yellow:											rgb(255, 255, 217);
+$body:												rgb(230, 230, 230);
+
+/*
+	Typography
+*/
+
+$body-font:										monospace;
+$heading-font:								"Fugaz One", sans-serif;
+$heading-text-transform:			uppercase;
+$nav-font:										$body-font;
+$nav-text-transform:					capitalize;
+
+$body-min:				            16;
+$body-max:				            19;
+
+$h1-min:											$body-min + 19;
+$h1-max:											$body-max + 60;
+$h2-min:											$body-min + 4;
+$h2-max:											$body-max + 13;
+$h3-min:											$body-min + 2;
+$h3-max:											$body-max + 11;
+
+$nav-min:											$body-min - 8;
+$nav-max:											$body-max - 6;
+
+$footer-min:									$body-min - 2;
+$footer-max:									$body-max - 2;
+
+/*
+	Font Weights & Line Heights
+*/
+
+$fw-light:										300;
+$fw-normal:										400;
+$fw-bold:											700;
+$fw-black:										800;
+$fw-heading:									$fw-normal;
+$fw-nav:											$fw-normal;
+$line-height-base:						1.6;
+
+/*
+	Nav Colors
+*/
+$nav-link:										$black;
+$nav-link-hover:							$black;
+$nav-link-bg:									rgb(192, 192, 190);
+$nav-link-bg-hover:						$green;
+
+/*
+	Link Colors
+*/
+
+$link-color:									darken($body, 10%);
+$link-color-hover:						$primary;

@@ -1,0 +1,19 @@
+/*
+	Footer Styles
+*/
+
+footer {
+
+	.container {
+		padding: rem-calc(15) rem-calc(20);
+
+		h3 {
+			display: block;
+			margin: 0;
+			font-family: $body-font;
+			font-size: rem-calc(10);
+			line-height: 1;
+			color: darken($blue, 25%);
+		}
+	}
+}

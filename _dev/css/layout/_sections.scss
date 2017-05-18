@@ -1,0 +1,58 @@
+section {
+	position: relative;
+	padding: 0 rem-calc(20);
+
+	@include fp(padding-top,20,120);
+
+	@include fp(padding-bottom,20,120);
+
+	.container {
+
+		@include fp(padding-top,40,120);
+
+		@include fp(padding-bottom,40,120);
+	}
+
+	&#banner,
+	&#social {
+		padding: 0;
+
+		.container {
+			padding: 0;
+		}
+	}
+
+	&#portfolio {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&#portfolio,
+	&#latest-blog {
+
+		.container {
+			max-width: 100%;
+		}
+	}
+
+	&#content {
+
+		article {
+			padding: rem-calc(20) 0;
+			border-bottom: rem-calc(2) solid $white;
+
+			h3 {
+				margin: 0;
+			}
+
+			small {
+				display: block;
+				margin-bottom: rem-calc(20);
+			}
+
+			.btn {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+#social {
+	z-index: 1;
+
+	ul {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-around;
+		margin: 0;
+		width: 100%;
+
+		li {
+			display: inline-block;
+
+			a {
+				font-size: rem-calc(32);
+				color: $blue;
+				transition: color 0.3s ease-in-out;
+
+				&:hover,
+				&:focus {
+					color: $green;
+				}
+			}
+		}
+	}
+
+	@include bp( $tablet-portrait ) {
+		position: absolute;
+		right: 0;
+		min-height: 100vh;
+		width: auto;
+		background-color: transparent;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			padding-right: rem-calc(20);
+			list-style: none;
+			text-align: left;
+
+			li {
+				display: block;
+			}
+		}
+	}
+}

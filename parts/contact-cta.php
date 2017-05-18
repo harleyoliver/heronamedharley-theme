@@ -5,7 +5,8 @@
  * @package WordPress
  */
 
-?><section id="contact">
+?>
+<section id="contact">
 	<h2>Contact</h2>
 	<div class="container">
 		<div class="row">

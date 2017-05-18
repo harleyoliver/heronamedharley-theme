@@ -1,0 +1,81 @@
+/*
+	Links
+*/
+
+main,
+#latest-blog {
+
+	a {
+		position: relative;
+		text-decoration: none;
+		color: $body;
+		border-bottom: rem-calc(1) dotted $link-color;
+		transition: all 0.3s ease-in-out;
+
+		&.btn {
+			display: block;
+			margin-bottom: rem-calc(40);
+			text-align: center;
+			line-height: 3;
+			font-size: rem-calc(14);
+			background-color: rgb(191, 184, 191);
+			border-top: rem-calc(1) solid $white;
+			border-left: rem-calc(1) solid $white;
+			border-bottom: rem-calc(1) solid $black;
+			border-right: rem-calc(1) solid $black;
+			color: $black;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: transparent;
+				border: rem-calc(1) solid rgb(120, 127, 120);
+				border-top-color: rgb(224, 224, 224);
+				border-left-color: rgb(224, 224, 224);
+				z-index: 1;
+				transition: all 0.3s ease-in-out;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 3px;
+				left: 3px;
+				right: 3px;
+				bottom: 3px;
+				background: transparent;
+				border: rem-calc(1) dotted transparent;
+				z-index: 1;
+				transition: all 0.3s ease-in-out;
+			}
+
+			&.right {
+				margin-left: auto;
+			}
+
+			&:hover,
+			&:focus {
+				color: $black;
+
+				&:after {
+					border-color: $black;
+				}
+			}
+
+			@include bp($tablet-portrait) {
+				max-width: rem-calc(200);
+			}
+		}
+
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			color: $salmon;
+			border-bottom: rem-calc(1) solid $primary;
+		}
+	}
+}

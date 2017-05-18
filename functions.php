@@ -27,6 +27,10 @@ function theme_scripts() {
 	/* FontAwesome */
 	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', null, 'null', 'all' );
 
+	/* Modernizr */
+	wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/assets/js/modernizr.js', null, null, true );
+	wp_enqueue_script( 'modernizr' );
+
 	/* Load jQuery from Google CDN */
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', null, null, true );
@@ -36,8 +40,12 @@ function theme_scripts() {
 	wp_register_script( 'webfontloader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js', null, null, true );
 	wp_enqueue_script( 'webfontloader' );
 
+	/* Google Fonts */
+	wp_register_script( 'googlefonts', get_stylesheet_directory_uri() . '/assets/js/googlefonts.js', array( 'webfontloader' ), null, true );
+	wp_enqueue_script( 'googlefonts' );
+
 	/* Custom JavaScript */
-	wp_register_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), null, true );
+	wp_register_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), null, true );
 	wp_enqueue_script( 'scripts' );
 }
 
@@ -98,7 +106,9 @@ class External_URL {
 		$external_url = get_post_meta( $post->ID, 'url_external_url', true );
 
 		// Set default values.
-		if ( empty( $external_url ) ) $external_url = '';
+		if ( empty( $external_url ) ) {
+			$external_url = '';
+		}
 
 		// Form fields.
 		echo '<table class="form-table">';
@@ -125,12 +135,14 @@ class External_URL {
 		$nonce_action = 'url_nonce_action';
 
 		// Check if a nonce is set.
-		if ( ! isset( $nonce_name ) )
+		if ( ! isset( $nonce_name ) ) {
 			return;
+		}
 
 		// Check if a nonce is valid.
-		if ( ! wp_verify_nonce( $nonce_name, $nonce_action ) )
+		if ( ! wp_verify_nonce( $nonce_name, $nonce_action ) ) {
 			return;
+		}
 
 		// Sanitize user input.
 		$url_new_external_url = isset( $_POST['url_external_url'] ) ? esc_url( $_POST['url_external_url'] ) : '';

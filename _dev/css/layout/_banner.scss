@@ -1,0 +1,101 @@
+section#banner {
+	position: relative;
+	min-height: 100vh;
+
+	.container,
+	.row {
+		height: 100vh;
+
+		.col {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			svg {
+				display: block;
+				max-width: rem-calc(650);
+
+				#sun {
+
+					@keyframes sunrise {
+
+						0% {
+							fill: rgba($blue, 0);
+						}
+
+						10% {
+							fill: rgba($blue, 0.1);
+						}
+
+						20% {
+							fill: rgba($blue, 0.2);
+						}
+
+						30% {
+							fill: rgba($blue, 0.3);
+						}
+
+						40% {
+							fill: rgba($blue, 0.4);
+						}
+
+						50% {
+							fill: rgba($blue, 0.5);
+						}
+
+						60% {
+							fill: rgba($blue, 0.6);
+						}
+
+						70% {
+							fill: rgba($blue, 0.7);
+						}
+
+						80% {
+							fill: rgba($blue, 0.8);
+						}
+
+						90% {
+							fill: rgba($blue, 0.9);
+						}
+
+						100% {
+							fill: rgba($blue, 1);
+						}
+					}
+
+					fill: rgba($blue, 1);
+					animation: sunrise 4s;
+				}
+
+				#hero {
+					fill: $pink;
+				}
+
+				#innercape {
+					fill: $yellow;
+				}
+
+				#shadows {
+					fill: $pink;
+				}
+
+				#outrcape {
+					fill: $salmon;
+				}
+			}
+
+			a > i {
+				font-size: rem-calc(80);
+				color: $green;
+				transition: all 0.3s ease-in-out;
+
+				&:hover,
+				&:focus {
+					color: $blue;
+				}
+			}
+		}
+	}
+}

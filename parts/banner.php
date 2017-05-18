@@ -1,11 +1,12 @@
 <?php
 /**
- * Hoepage banner partial
+ * Homepage banner partial
  *
  * @package WordPress
  */
 
-?><section id="banner">
+?>
+<section id="banner">
 	<div class="container">
 		<div class="row">
 			<div class="sixteen col">

@@ -1,0 +1,118 @@
+/*
+	Typography
+*/
+
+/*
+	Body font
+*/
+body,
+p {
+
+	@include fp(font-size,$body-min,$body-max);
+	font-family: $body-font;
+}
+
+/*
+	Headings
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $heading-font;
+	font-weight: $fw-heading;
+	text-transform: $heading-text-transform;
+	line-height: $line-height-base;
+}
+
+h1 {
+
+	@include fp(margin-bottom,20,40);
+
+	@include fp(font-size,$h1-min,$h1-max);
+	position: relative;
+	margin: 0 0 rem-calc(60) 0;
+	font-family: "Rozha One", serif;
+	line-height: 1.2;
+	color: $salmon;
+	text-align: center;
+	border-top: rem-calc(3) solid $blue;
+	border-bottom: rem-calc(3) solid $blue;
+
+	#banner & {
+		max-width: 80%;
+	}
+}
+
+h2 {
+
+	@include fp(font-size,62,240);
+	position: relative;
+	display: block;
+	max-width: 80%;
+	margin: 0 auto;
+	font-family: "Rozha One", serif;
+	line-height: 1;
+	text-align: center;
+	border-top: rem-calc(3) solid $blue;
+	border-bottom: rem-calc(3) solid $blue;
+
+	#about &,
+	#portfolio & {
+		color: $blue;
+	}
+
+	#latest-blog &,
+	#contact & {
+		color: $pink;
+		border-color: $pink;
+	}
+}
+
+h3 {
+
+	@include fp(font-size,$h3-min,$h3-max);
+	margin-bottom: rem-calc(10);
+
+	@include fp(margin-bottom,5,10);
+
+	#latest-blog .three & {
+		text-align: right;
+		line-height: 1.2;
+		margin-bottom: rem-calc(40);
+	}
+}
+
+/*
+	Paragraphs, Strong tags & Lists
+*/
+main {
+
+	p {
+
+		@include fp(margin-bottom,$body-min,$body-max);
+		line-height: $line-height-base;
+	}
+
+	strong {
+		font-weight: $fw-bold;
+	}
+
+	ul,
+	ol {
+
+		@include fp(font-size,$body-min,$body-max);
+		margin: 0;
+
+		li {
+			line-height: $line-height-base;
+		}
+
+		ul,
+		ol {
+			margin: 0;
+		}
+	}
+}

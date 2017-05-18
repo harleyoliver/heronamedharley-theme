@@ -1,0 +1,32 @@
+section#contact {
+
+	p {
+		color: $body;
+		margin-bottom: rem-calc(40);
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+
+		li {
+			display: inline-block;
+			font-size: rem-calc(44);
+			color: $salmon;
+
+			a {
+				text-decoration: none;
+				color: $salmon;
+				transition: color 0.3s ease-in-out;
+
+				&:hover,
+				&:focus {
+					color: $pink;
+				}
+			}
+		}
+	}
+}
