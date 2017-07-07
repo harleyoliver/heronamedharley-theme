@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Page templte for the 404 Not Found page.
+ *
+ * @package WordPress
+ */
+
+get_header(); ?>
 <section id="content">
 	<div class="container">
 		<div class="row">

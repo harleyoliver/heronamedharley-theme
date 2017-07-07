@@ -3,6 +3,7 @@
  * Functions file.
  *
  * @package WordPress
+ * @param var $post_id ID of the Post variable.
  */
 
 /* Register navigation menus */
@@ -96,6 +97,8 @@ class External_URL {
 
 	/**
 	 * Render the metaboxes in the editor
+	 *
+	 * @param var $post Global Post variable.
 	 */
 	public function render_metabox( $post ) {
 

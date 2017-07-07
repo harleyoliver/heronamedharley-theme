@@ -1,1 +1,1 @@
-WebFont.load({ google: { families: [ 'Rozha One', 'Fugaz One' ] }}); 
+WebFont.load({ google: { families: [ 'Rozha One', 'Fugaz One' ] }});

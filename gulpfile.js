@@ -5,7 +5,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var minify = require('gulp-minify-css');
-var uncss = require('gulp-uncss');
 var browserSync = require('browser-sync').create();
 var svgmin = require('gulp-svgmin');
 
@@ -16,12 +15,6 @@ gulp.task('sass', function() {
   return gulp.src('_dev/css/**/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer())
-	.pipe(uncss({
-		html : [
-			"https:\/\/www.heronamedharley.com\/",
-			"https:\/\/www.heronamedharley.com\/blog",
-			"https:\/\/www.heronamedharley.com\/2017\/04\/search-posts-using-react-js-wordpress-rest-api",
-	}))
   .pipe(minify({
     keepSpecialComments: 1
   }))
